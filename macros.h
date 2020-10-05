@@ -7,9 +7,11 @@ typedef int zahl;
 typedef char buchstabe;
 typedef unsigned char haps; /* Byte */
 
+#define drucke_formattiert printf
 #define eingang main
 #define start {
 #define ende }
+#define zeiger *
 #define ist ==
 #define nicht !=
 #define soll =

@@ -3,11 +3,12 @@
 
 zahl eingang() start
 	zahl a soll 42 sein
+	buchstabe zeiger satz soll "Deutsch auf c ist toll!" sein
 
 	wenn (a nicht 42)
-		printf("%d\n", 42) sofort
+		drucke_formattiert("%d\n", 42) sofort
 	ansonsten wenn (a ist 42)
-		printf("ok\n") sofort
+		drucke_formattiert("%s\n", satz) sofort
 
 	mache
 		a verkleinern sofort
