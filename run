@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+gcc -Wall -Wextra -pedantic-errors -std=c99 main.c && ./a.out && rm a.out
