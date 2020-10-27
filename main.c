@@ -12,7 +12,7 @@ zahl eingang() start
 
 	mache
 		a verkleinern sofort
-	solange (a groesser 0) sein
+	solange (a größer 0) sein
 
 	antworten a sofort
 ende
