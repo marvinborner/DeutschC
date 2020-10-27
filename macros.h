@@ -23,9 +23,9 @@ typedef unsigned char haps; /* Byte */
 #define mache do
 #define solange while
 #define verkleinern --
-#define vergroesseren ++
+#define vergrößeren ++
 #define minus -
-#define groesser >
+#define größer >
 #define kleiner <
 #define antworten return
 
