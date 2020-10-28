@@ -1,3 +1,14 @@
 #!/usr/bin/env sh
 
-gcc -Wall -Wextra -pedantic-errors -std=c99 main.c && ./a.out && rm a.out
+rm -rf build/ && mkdir -p build/
+
+convert() {
+	cat $1 | perl -pe 'BEGIN { binmode STDIN, ":utf8"; } s/(.)/ord($1) < 128 ? $1 : sprintf("\\U%08x", ord($1))/ge;' > build/$1
+}
+
+convert main.c
+convert macros.h
+
+cd build/ || exit 1
+gcc -Wall -Wextra -pedantic-errors -std=c11 main.c && ./a.out && rm a.out
+cd ../ && rm -rf build/
